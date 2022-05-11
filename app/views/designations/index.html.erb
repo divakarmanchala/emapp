@@ -1,0 +1,39 @@
+<div class="admin-main-container">
+  <%= render 'layouts/adminleftnav' %>
+  <div class="admin-management-right-container w-75">
+    <h1 class="admin-management-heading">Designation Management</h1>
+    <div class="admin-management-search-container">
+      <%= link_to "Add New Designation", new_designation_path,  class: "btn admin-add-new-button" %>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search Designation" aria-label="Search">
+        <button class="btn admin-search-button" type="submit">Search</button>
+      </form>
+    </div>
+    <div class="w-100">
+      <table class="table-container w-100">
+        <tr class="t-header-cotainer">
+            <th>Name</th>
+            <th>Description</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <% @designations.each do |r| %>
+            <tr class="t-sub-container">
+                <td>
+                <%= r.name %>
+                </td>
+                <td>
+                <%= r.description %>
+                </td>
+                <td>
+                <%= link_to "Edit", edit_designation_path(r), class: "btn btn-primary" %> 
+                </td>   
+                <td>
+                <%= button_to "Delete", designation_path(r),  class: "btn btn-danger", method: :delete %>
+                </td>
+            </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

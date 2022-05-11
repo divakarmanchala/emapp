@@ -1,0 +1,20 @@
+<%= form_with(model: @leave_type, local: true) do |f| %>
+  <div class="f-container">
+    <div>
+      <div class="field">
+        <%= f.label :name %><br />
+        <%= f.text_field :name %>
+      </div>
+  
+      <div class="field">
+        <%= f.label :description %><br />
+        <%= f.text_field :description %>
+      </div>
+  
+      <div class="actions admin-add-cancel-buttons-container">
+        <%= f.submit class: "btn btn-primary f-submit-buttons" %>
+        <%= link_to "Cancel", leave_types_path, class: "btn btn-danger", method: :get %>
+      </div>
+    </div>
+  </div>
+<% end %>

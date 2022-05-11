@@ -1,0 +1,20 @@
+<%= form_with(model: @designation , local: true) do |d| %>
+  <div class="f-container">
+    <div>
+      <div class="field">
+        <%= d.label :name %><br />
+        <%= d.text_field :name %>
+      </div>
+  
+      <div class="field">
+        <%= d.label :description %><br />
+        <%= d.text_field :description %>
+      </div>
+  
+      <div class="actions admin-add-cancel-buttons-container">
+        <%= d.submit class: "btn btn-primary f-submit-buttons" %>
+        <%= link_to "Cancel", designations_path, class: "btn btn-danger", method: :get %>
+      </div>
+    </div>
+  </div>
+<% end %>

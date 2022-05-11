@@ -1,0 +1,39 @@
+<div class="admin-main-container">
+  <%= render 'layouts/adminleftnav' %>
+  <div class="admin-management-right-container w-75">
+    <h1 class="admin-management-heading">Leave Type Management</h1>
+    <div class="admin-management-search-container">
+      <%= link_to "Add New Leave Type", new_leave_type_path,  class: "btn admin-add-new-button" %>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search Employee" aria-label="Search">
+        <button class="btn admin-search-button" type="submit">Search</button>
+      </form>
+    </div>
+    <div class="w-100">
+      <table class="table-container w-100">
+        <tr class="t-header-cotainer">
+            <th>Name</th>
+            <th>Description</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <% @leave_types.each do |lt| %>
+            <tr class="t-sub-container">
+                <td>
+                <%= lt.name %>
+                </td>
+                <td>
+                <%= lt.description %>
+                </td>
+                <td>
+                <%= link_to "Edit", edit_leave_type_path(lt), class: "btn btn-primary" %> 
+                </td>   
+                <td>
+                <%= button_to "Delete", leave_type_path(lt),  class: "btn btn-danger", method: :delete %>
+                </td>
+            </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

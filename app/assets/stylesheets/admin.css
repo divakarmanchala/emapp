@@ -36,6 +36,7 @@
 }
 
 .admin-add-cancel-buttons-container {
+  width: 110%;
   margin-top: 28px;
   display: flex;
   justify-content: space-between;
