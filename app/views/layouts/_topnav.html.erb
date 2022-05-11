@@ -1,0 +1,33 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="navigation-cutom-items">
+    <a class="navbar-brand ml-5" href="/">
+      <img class="zensark-logo" src="https://zensark.com/zensark2/wp-content/uploads/2021/01/Asset-16.png">
+    </a>
+    <% if current_employee %>
+      <div class="profile-container">
+        <p class="profile-name">
+          <%= $name %>
+          <% if current_employee.role_id == 1%>
+            Admin
+          <% end %>
+        </p>
+        <div class="dropdown">
+          <button class="round-button bg-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <%= $profile_name %>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="/users">Adminstration</a></li>
+            <li><a class="dropdown-item" href="#">Manager</a></li>
+            <li><%= button_to "Logout", destroy_employee_session_path, class: " dropdown-item btn btn-secondary", method: :delete%></li>
+          </ul>
+        </div>
+      </div>
+    <% else%>
+    <% if request.path.split("/").last == 'sign_in' || request.path.split("/").last == 'sign_in?' %>
+      <%= button_to "Home", root_path, class: "btn btn-outline-dark", method: :get %>
+    <% else %>
+      <%= button_to "Sign In", new_employee_session_path, class: "btn btn-outline-dark mr-5", method: :get %>
+    <% end%>
+    <%end%>
+  </div>
+</nav>

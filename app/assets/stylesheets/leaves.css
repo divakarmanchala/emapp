@@ -1,0 +1,129 @@
+.leaves-main-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f5f5f5;
+  width: 100%;
+}
+
+
+
+.leave-section-main-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.leaves-top-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 0 15px rgba(0,0,0,0.75);
+  height: 20%;
+  background-color: white;
+}
+
+.leave-count-heading {
+  font-size: 20px;
+}
+.leave-count-description {
+  font-size: 16px;
+}
+
+.apply-leave-form-container {
+  margin-left: 20px;
+  margin-top: 20px;
+  background-color: white;
+  height: 100%;
+  padding: 40px;
+}
+
+.applye-leave-heading {
+  font-size: 22px;
+}
+
+.leave-bottom-container {
+  display: flex;
+}
+
+.leave-form-left-container {
+  width: 45%;
+}
+
+.leave-field {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.leave-types-select-container {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+.from-to-main-container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.from-container {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+.to-container {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.from-to-input {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.leave-mehthod-session-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 80%;
+}
+
+.leave-method-container {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.leave-session-container {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.leave-from-right-container {
+  width: 45%;
+}
+
+.leaves-text-area-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.leave-apply-button {
+  border: none;
+  border-radius: 6px;
+  color: white;
+  background-color: #1283cb;
+  margin-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

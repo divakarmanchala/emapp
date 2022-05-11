@@ -1,35 +1,35 @@
 <div class="admin-main-container">
   <%= render 'layouts/adminleftnav' %>
   <div class="admin-management-right-container w-75">
-    <h1 class="admin-management-heading">Role Management</h1>
+    <h1 class="admin-management-heading">Holidays Management</h1>
     <div class="admin-management-search-container">
-      <%= link_to "Add New Role Type", new_role_path,  class: "btn admin-add-new-button" %>
+      <%= link_to "Add New Holiday", new_holiday_path,  class: "btn admin-add-new-button" %>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search Role" aria-label="Search">
+        <input class="form-control me-2" type="search" placeholder="Search Holiday" aria-label="Search">
         <button class="btn admin-search-button" type="submit">Search</button>
       </form>
     </div>
     <div class="w-100">
       <table class="table-container w-100">
         <tr class="t-header-cotainer">
-            <th>Name</th>
-            <th>Description</th>
+            <th>Holiday Name</th>
+            <th>Holiday Date</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
-        <% @roles.each do |r| %>
+        <% @holidays.each do |holiday| %>
             <tr class="t-sub-container">
                 <td>
-                <%= r.name %>
+                <%= holiday.name %>
                 </td>
                 <td>
-                <%= r.description %>
+                <%= holiday.date %>
                 </td>
                 <td>
-                <%= link_to "Edit", edit_role_path(r), class: "btn btn-primary" %> 
+                <%= link_to "Edit", edit_holiday_path(holiday), class: "btn btn-primary" %> 
                 </td>   
                 <td>
-                <%= button_to "Delete", role_path(r),  class: "btn btn-danger", method: :delete %>
+                <%= button_to "Delete", holiday_path(holiday),  class: "btn btn-danger", method: :delete %>
                 </td>
             </tr>
         <% end %>

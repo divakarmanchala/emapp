@@ -1,0 +1,19 @@
+.admin-left-nav-container {
+  display: flex;
+  flex-direction: column;
+  width: 22%;
+  height: 100vh;
+}
+
+.admin-left-buttons {
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #27518b;
+  height: 25%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

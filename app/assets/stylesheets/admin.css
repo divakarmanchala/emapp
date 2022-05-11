@@ -1,0 +1,47 @@
+/* this styling for common things in admin accessable */
+.admin-main-container {
+  display: flex;
+  background-color: white;
+}
+
+.admin-management-right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.admin-management-heading {
+  color: black;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.admin-management-search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.admin-search-button{
+  color: #27518b !important;
+  border-color: #27518b !important;
+}
+
+.admin-add-new-button {
+  color: white !important;
+  background-color: #27518b !important;
+}
+
+.admin-add-cancel-buttons-container {
+  margin-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.field {
+  margin-top: 10px;
+}

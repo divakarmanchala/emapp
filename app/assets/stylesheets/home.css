@@ -1,0 +1,55 @@
+.home-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 80vh;
+}
+
+.home-card-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 80%;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+
+.home-descripton-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-left: 20px;
+}
+
+@keyframes breath {
+  0%   { background-size: 120% auto; }
+  50% { background-size: 140% auto; }
+}
+
+
+.home-image-container {
+  background-image: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  width: 55%;
+  animation: breath 35s;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center center;
+  height: 400px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.get-more-about-button {
+  background-color: #24a0ed;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.home-heading {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,87 @@
+.dashboard-main-container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+
+.dashboard-right-container {
+  height: 98%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  background-color: white;
+}
+
+.dashboard-right-top-container {
+  height: 47%;
+  background-color: white;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dashboard-right-bottom-container {
+  height: 45%;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.dashboard-right-bottom-left-container {
+  height: 100%;
+  background-color: #e3f2fd;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dashboard-right-bottom-right-container {
+  height: 100%;
+  background-color: #e3f2fd;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.column-chart-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #e3f2fd;
+}
+
+.heading-container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-top: 10px;
+  padding-bottom: 7px;
+  background-color: white;
+}
+
+.attendace-heading {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 76px;
+}
+
+.leaves-heading {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 76px;
+}
+
+.holidays-heading {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 76px;
+  
+}

@@ -1,0 +1,40 @@
+<div class="login-main-container">
+  <div class="login-sub-container">
+    <div class="login-page-left-container">
+      <h2 class="login-heading">Log in</h2>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field email-container">
+        <%= f.label :email, class: "lable" %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password, class: "lable" %><br />
+        <%= f.password_field :password, autocomplete: "current-password", class: "input" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "Log in", class: "session-login-button" %>
+      </div>
+    <% end %>
+
+    
+    </div>
+  </div>
+  <div class="login-page-right-container">
+    <div class="company-description">
+      <p>About us</p>
+      <h1>We are dedicated to your success</h1>
+      <p>Zensark is an agile technology services company, We bring together strong industry experience and deep technical expertise to help customers drive business value and revenue growth.</p>
+      <p>Zensark accords the highest priority to quality of software, and also the security of customer data.</p>
+      <p>We understand your business and we are focused on meeting your needs and exceeding your expectations.</p>
+    </div>
+  </div>
+</div>

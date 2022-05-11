@@ -1,0 +1,100 @@
+.login-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  
+}
+
+.login-sub-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  background-color: #ffffff;
+  height: 100vh;
+}
+
+.login-page-left-container {
+  width: 45%;
+}
+
+
+
+.login-page-right-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: #f3f5f9;
+  height: 100vh;
+}
+.company-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+
+.login-heading {
+  margin-bottom: 20px;
+  font-family: Arial;
+  text-align: left;
+}
+
+.login-portal-buttons-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.forgot-password-link {
+  
+  text-decoration: none;
+  color: #1a73e8;
+  font-weight: 500;
+  font-family: Arial;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+.field {
+  margin-bottom: 15px;
+}
+
+.session-login-button {
+  margin-bottom: 20px;
+  text-decoration: none;
+  background-color: #7e56da;
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 8px;
+  font-family: Arial;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  width: 100%;
+  
+}
+.lable {
+  font-weight: bold;
+  color: #635f55;
+  
+}
+.input {
+  border-radius: 3px;
+  border: 2px solid;
+  height: 22px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+}
