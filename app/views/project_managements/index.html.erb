@@ -1,0 +1,59 @@
+<div class="admin-main-container">
+  <%= render 'layouts/adminleftnav' %>
+  <div class="admin-management-right-container">
+    <h1 class="admin-management-heading">Employees Management</h1>
+    <div class="admin-management-search-container">
+      <%= link_to "Add New Project", new_project_management_path,  class: "btn admin-add-new-button" %>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search Project" aria-label="Search">
+        <button class="btn admin-search-button" type="submit">Search</button>
+      </form>
+    </div>
+    <div>
+      <table class="table-container">
+        <tr class="t-header-cotainer">
+            <th>Project Name</th>
+            <th>Client Name</th>
+            <th>Manager Id</th>
+            <th>Description</th>
+            <th>Date Time</th>
+            <th>Shift Info</th>
+            <th>Project Type</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <% @project_managements.each do |u| %>
+            <tr class="t-sub-container">
+                <td>
+                <%= u.project_name %>
+                </td>
+                <td>
+                <%= u.client %>
+                </td>
+                <td>
+                  <%= u.manager_id %>
+                </td>
+                <td>
+                  <%= u.description %>
+                </td>
+                <td>
+                  <%= u.datetime %>
+                </td>
+                <td>
+                  <%= u.shift_info %>
+                </td>
+                <td>
+                  <%= u.project_type %>
+                </td>
+                <td>
+                <%= link_to "Edit", edit_project_management_path(u), class: "btn btn-primary" %> 
+                </td>   
+                <td>
+                <%= button_to "Delete", project_management_path(u),  class: "btn btn-danger", method: :delete %>
+                </td>
+            </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

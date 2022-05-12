@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_11_113948) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_11_121355) do
   create_table "designations", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -57,6 +57,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_11_113948) do
   create_table "leave_types", force: :cascade do |t|
     t.string "name"
     t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "project_managements", force: :cascade do |t|
+    t.string "project_name"
+    t.string "client"
+    t.integer "manager_id"
+    t.string "description"
+    t.datetime "datetime"
+    t.string "shift_info"
+    t.string "project_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

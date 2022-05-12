@@ -34,6 +34,8 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'webpacker'
 
+gem "chartkick"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

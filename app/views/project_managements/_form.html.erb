@@ -1,0 +1,48 @@
+<%= form_with(model: @project_management, local: true) do |f| %>
+  <div class="f-container">
+    <div class="r-form-left-container">
+      <div class="field">
+        <%= f.label :project_name %><br />
+        <%= f.text_field :project_name %>
+      </div>
+
+      <div class="field">
+        <%= f.label :client %><br />
+        <%= f.text_field :client %>
+      </div>
+
+      <div class="field">
+        <%= f.label :manager_id, "Manager Id" %><br />
+        <%= f.number_field :manager_id %>
+      </div>
+
+      <div class="field">
+        <%= f.label :description, "Description" %><br />
+        <%= f.text_field :description %>
+      </div>
+    </div>
+
+    <div class="r-form-right-container">
+      <div class="field">
+        <%= f.label :datetime, "Date Time" %><br />
+        <%= f.datetime_field :datetime %>
+      </div>
+
+      <div class="field">
+        <%= f.label :shift_info, "Shift Info" %><br />
+        <%= f.text_field :shift_info %>
+      </div>
+
+      <div class="field">
+        <%= f.label :project_type, "Project Type" %><br />
+        <%= f.text_field :project_type %>
+      </div>
+
+      <div class="actions admin-add-cancel-buttons-container">
+        <%= f.submit class: "btn btn-primary f-submit-buttons" %>
+        <%= link_to "Cancel", project_managements_path, class: "btn btn-danger" %>
+      </div>
+
+    </div>
+  </div>
+<% end %>
