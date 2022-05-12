@@ -1,0 +1,48 @@
+<div class="admin-main-container">
+  <%= render 'layouts/adminleftnav' %>
+  <div class="admin-management-right-container">
+    <h1 class="admin-management-heading">Employees Management</h1>
+    <div class="admin-management-search-container">
+      <%= link_to "Add New Employee", new_employee_path,  class: "btn admin-add-new-button" %>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search Employee" aria-label="Search">
+        <button class="btn admin-search-button" type="submit">Search</button>
+      </form>
+    </div>
+    <div>
+      <table class="table-container">
+        <tr class="t-header-cotainer">
+            <th class="t-header">First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Details</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <% @employees.each do |u| %>
+            <tr class="t-sub-container">
+                <td>
+                <%= u.first_name.capitalize %>
+                </td>
+                <td>
+                <%= u.last_name.capitalize %>
+                </td>
+                <td>
+                <%= u.email%>
+                </td>
+                <td>
+                <%= link_to "More Details", root_path(u) %>
+                </td>
+                <td>
+                
+                <%= link_to "Edit", edit_employee_path(u), class: "btn btn-primary" %> 
+                </td>   
+                <td>
+                <%= button_to "Delete", employee_path(u),  class: "btn btn-danger", method: :delete %>
+                </td>
+            </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

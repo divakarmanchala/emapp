@@ -16,7 +16,7 @@
             <%= current_employee.profile_letters %>
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="/leave_types">Adminstration</a></li>
+            <li><a class="dropdown-item" href="/employees">Adminstration</a></li>
             <li><a class="dropdown-item" href="#">Manager</a></li>
             <li><%= button_to "Logout", destroy_employee_session_path, class: " dropdown-item btn btn-secondary", method: :delete%></li>
           </ul>

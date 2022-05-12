@@ -1,0 +1,50 @@
+<%= form_with model: @employee, method: :patch, local: true, local: true do |f| %>
+  <div class="f-container">
+    <div class="r-form-left-container">
+      <div class="field">
+        <%= f.label :first_name %><br />
+        <%= f.text_field :first_name %>
+      </div>
+
+      <div class="field">
+        <%= f.label :last_name %><br />
+        <%= f.text_field :last_name %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email %>
+      </div>
+
+      <div class="field">
+        <%= f.label :employee_id, "Employe Id" %><br />
+        <%= f.text_field :employee_id %>
+      </div>
+    </div>
+
+    <div class="r-form-right-container">
+      <div class="field">
+        <%= f.label :role_id, "Role Id" %><br />
+        <%= f.select :role_id, [['admin', 1],['manager',2]] %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation %>
+      </div>
+
+      <div class="actions admin-add-cancel-buttons-container">
+        <%= f.submit class: "btn btn-primary f-submit-buttons" %>
+        <%= link_to "Cancel", employees_path, class: "btn btn-danger", method: :get %>
+      </div>
+    </div>
+  </div>
+<% end %>
