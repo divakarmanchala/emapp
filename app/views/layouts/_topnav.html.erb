@@ -6,17 +6,17 @@
     <% if current_employee %>
       <div class="profile-container">
         <p class="profile-name">
-          <%= current_employee.profile_name %>
+          <%= current_employee.full_name %>
           <% if current_employee.role_id == 1%>
             Admin
           <% end %>
         </p>
         <div class="dropdown">
           <button class="round-button bg-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            <%= $profile_name %>
+            <%= current_employee.profile_letters %>
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="/users">Adminstration</a></li>
+            <li><a class="dropdown-item" href="/leave_types">Adminstration</a></li>
             <li><a class="dropdown-item" href="#">Manager</a></li>
             <li><%= button_to "Logout", destroy_employee_session_path, class: " dropdown-item btn btn-secondary", method: :delete%></li>
           </ul>
