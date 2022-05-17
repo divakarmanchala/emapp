@@ -58,6 +58,7 @@
   }
 }
 
+
 .f-container {
   display: flex;
 }
@@ -66,3 +67,12 @@
   margin-right: 25px;
 }
 // end
+
+
+// for employee resgistration roll drop down
+
+select {
+  width: 89%;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
