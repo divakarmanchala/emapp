@@ -3,7 +3,7 @@
   <div class="admin-management-right-container">
     <h1 class="admin-management-heading">Employees Management</h1>
     <div class="admin-management-search-container">
-      <%= link_to "Add New Employee", new_employee_path,  class: "btn admin-add-new-button" %>
+      <%= link_to "Add New Employee", new_employee_path,  class: "btn admin-add-new-button", data: { turbo_frame: "remote_modal" } %>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search Employee" aria-label="Search">
         <button class="btn admin-search-button" type="submit">Search</button>
@@ -34,11 +34,10 @@
                 <%= link_to "More Details", root_path(u) %>
                 </td>
                 <td>
-                
-                <%= link_to "Edit", edit_employee_path(u), class: "btn btn-primary" %> 
+                <%= link_to "", edit_employee_path(u), class: "btn bi bi-pencil-square edit-button", data: { turbo_frame: "remote_modal" } %> 
                 </td>   
                 <td>
-                <%= button_to "Delete", employee_path(u),  class: "btn btn-danger", method: :delete %>
+                <%= button_to "", employee_path(u),  class: "btn bi bi-trash text-danger", method: :delete %>
                 </td>
             </tr>
         <% end %>

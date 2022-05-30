@@ -2,7 +2,8 @@
 <div class="admin-main-container">
   <%= render 'layouts/adminleftnav' %>
   <div class="admin-management-right-container">
-    <h1 class="admin-management-heading">Holidays Management</h1>
-    <%= render partial: 'holidays/form' %>
+    <%= render "remote_modal", title: "Edit Holiday" do %>
+      <%= render "form" %>
+    <% end %>
   </div>
 </div>

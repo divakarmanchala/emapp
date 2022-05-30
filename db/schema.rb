@@ -10,10 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_12_120606) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_24_043941) do
+  create_table "addresses", force: :cascade do |t|
+    t.string "address"
+    t.string "street"
+    t.string "city"
+    t.string "state"
+    t.string "pincode"
+    t.string "country"
+    t.integer "employee_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "attendances", force: :cascade do |t|
+    t.datetime "login"
+    t.datetime "logout"
+    t.string "reason"
+    t.integer "employee_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "designations", force: :cascade do |t|
     t.string "name"
     t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "employee_details", force: :cascade do |t|
+    t.string "contact_no"
+    t.string "emergency_contact_no"
+    t.integer "designation_id"
+    t.string "employee_id"
+    t.integer "manager_id"
+    t.string "blood_group"
+    t.integer "project_id"
+    t.integer "experience"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -81,6 +115,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_12_120606) do
     t.datetime "datetime"
     t.string "shift_info"
     t.string "project_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.integer "project_lead_id"
+    t.integer "manager_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

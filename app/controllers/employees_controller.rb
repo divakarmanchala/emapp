@@ -21,6 +21,7 @@ class EmployeesController < ApplicationController
       redirect_to employees_path
     else  
       render 'new'
+      format.turbo_stream { render :form_update, status: :unprocessable_entity }
     end
   end
 

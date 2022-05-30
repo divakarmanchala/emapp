@@ -1,9 +1,9 @@
 <div class="admin-main-container">
   <%= render 'layouts/adminleftnav' %>
   <div class="admin-management-right-container">
-    <h1 class="admin-management-heading">Employees Management</h1>
+    <h1 class="admin-management-heading">Projects Management</h1>
     <div class="admin-management-search-container">
-      <%= link_to "Add New Project", new_project_management_path,  class: "btn admin-add-new-button" %>
+      <%= link_to "Add New Project", new_project_management_path, class: "btn admin-add-new-button", data: { turbo_frame: "remote_modal" }%>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search Project" aria-label="Search">
         <button class="btn admin-search-button" type="submit">Search</button>
@@ -46,10 +46,10 @@
                   <%= u.project_type %>
                 </td>
                 <td>
-                <%= link_to "Edit", edit_project_management_path(u), class: "btn btn-primary" %> 
+                <%= link_to "", edit_project_management_path(u), class: "btn bi bi-pencil-square edit-button" %> 
                 </td>   
                 <td>
-                <%= button_to "Delete", project_management_path(u),  class: "btn btn-danger", method: :delete %>
+                <%= button_to "", project_management_path(u),  class: "btn bi bi-trash text-danger", method: :delete %>
                 </td>
             </tr>
         <% end %>

@@ -1,9 +1,11 @@
 .admin-left-nav-container {
   display: flex;
   flex-direction: column;
-  width: 22%;
+  width: 15%;
   height: 100vh;
 }
+
+
 
 .admin-left-buttons {
   text-align: center;

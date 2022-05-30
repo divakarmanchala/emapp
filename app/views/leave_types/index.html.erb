@@ -3,7 +3,7 @@
   <div class="admin-management-right-container w-75">
     <h1 class="admin-management-heading">Leave Type Management</h1>
     <div class="admin-management-search-container">
-      <%= link_to "Add New Leave Type", new_leave_type_path,  class: "btn admin-add-new-button" %>
+      <%= link_to "Add New Leave Type", new_leave_type_path,  class: "btn admin-add-new-button", data: { turbo_frame: "remote_modal" } %>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search Employee" aria-label="Search">
         <button class="btn admin-search-button" type="submit">Search</button>
@@ -26,10 +26,10 @@
                 <%= lt.description %>
                 </td>
                 <td>
-                <%= link_to "Edit", edit_leave_type_path(lt), class: "btn btn-primary" %> 
+                <%= link_to "", edit_leave_type_path(lt), class: "btn bi bi-pencil-square edit-button", data: { turbo_frame: "remote_modal" } %> 
                 </td>   
                 <td>
-                <%= button_to "Delete", leave_type_path(lt),  class: "btn btn-danger", method: :delete %>
+                <%= button_to "", leave_type_path(lt),  class: "btn bi bi-trash text-danger", method: :delete %>
                 </td>
             </tr>
         <% end %>

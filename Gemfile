@@ -36,6 +36,8 @@ gem 'webpacker'
 
 gem "chartkick"
 
+gem "hotwire-rails"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

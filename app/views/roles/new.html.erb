@@ -1,7 +1,8 @@
 <div class="admin-main-container">
   <%= render 'layouts/adminleftnav' %>
   <div class="admin-management-right-container">
-    <h1 class="admin-management-heading">Add Role</h1>
-    <%= render 'form' %>
+    <%= render "remote_modal", title: "Add Role" do %>
+      <%= render "form" %>
+    <% end %>
   </div>
 </div>

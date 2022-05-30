@@ -4,6 +4,15 @@
     <div class="attendance-right-top-container">
       <div class="attendance-card">
         <h1 class="attendance-heading">Attendance</h1>
+        <div>
+          <% if @c %>
+        <p class="time">Login Time= <%= @c.logintime %></p>
+        <p class="time">Logout Time=<%= @c.logouttime %></p>
+        <%= button_to "logout", edit_attendance_path(@c),method: :get,class: "btn btn-danger"%>
+      <% else %>
+        <%= button_to "login", new_attendance_path, method: :get,class: "btn btn-primary", data: { turbo_frame: "remote_modal" } %>
+      <% end %>
+        </div>
       </div>
       <div class="attendance-card">
         <h1 class="attendance-heading">Last week details</h1>
