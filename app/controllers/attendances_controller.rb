@@ -1,9 +1,10 @@
 class AttendancesController < ApplicationController
   before_action :set_attendance, only: [:edit, :destroy, :update]
+  before_action :check_login_logout, only: [:new, :edit, :index]
   
   def index 
-    @attendances = current_employee.attendances
-    @c=current_employee.attendances.where(login:Date.today.beginning_of_day..Date.today.end_of_day).first
+    @last_attendaces = current_employee.attendances.last(5)
+    @last_attendance = current_employee.attendances.last
   end
 
   def new 
@@ -38,6 +39,7 @@ class AttendancesController < ApplicationController
     redirect_to attendances_path
   end
 
+  private
 
   def set_attendance
     @attendance = Attendance.find(params[:id])
@@ -46,4 +48,9 @@ class AttendancesController < ApplicationController
   def attendanceparams
     params.require(:attendance).permit(:login, :logout,:reason,:employee_id)
   end
+
+  def check_login_logout
+    @set_form_and_button = current_employee.attendances.last.logout == nil
+  end
+
 end
